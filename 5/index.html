@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskFlow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>TaskFlow</h1>
+      <div class="tag">gestor de tareas · JS orientado a objetos</div>
+    </div>
+    <div class="tag" id="contador-tag">0 tareas</div>
+  </header>
+
+  <div id="status-line"></div>
+
+  <form id="task-form">
+    <input type="text" id="descripcion-input" placeholder="¿Qué hay que hacer?" required minlength="2">
+    <input type="datetime-local" id="fecha-limite-input">
+    <button type="submit">Agregar tarea</button>
+  </form>
+
+  <div class="toolbar">
+    <button type="button" class="secondary" id="btn-importar">Importar desde API</button>
+    <button type="button" class="secondary" id="btn-guardar">Guardar en localStorage</button>
+    <button type="button" class="secondary" id="btn-limpiar">Vaciar lista</button>
+  </div>
+
+  <ul id="lista-tareas"></ul>
+  <div id="vacio" style="display:none;">No hay tareas todavía. Agregá la primera arriba.</div>
+</div>
+
+<div id="notificaciones"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
